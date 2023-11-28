@@ -158,10 +158,60 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="title-创建自己的博客并记录创建方法date-2023-11-27-20-09-09tags"><a href="#title-创建自己的博客并记录创建方法date-2023-11-27-20-09-09tags" class="headerlink" title="title: 创建自己的博客并记录创建方法date: 2023-11-27 20:09:09tags:"></a>title: 创建自己的博客并记录创建方法<br>date: 2023-11-27 20:09:09<br>tags:</h2><h2 id="搭建Hexo博客"><a href="#搭建Hexo博客" class="headerlink" title="搭建Hexo博客"></a>搭建Hexo博客</h2><p>个人喜好问题没有使用cmd，使用的PowerShell,因为cmd没办法直接使用一个linux命令（以下内容皆以PowerShell操作)</p>
-<h4 id="基本需求"><a href="#基本需求" class="headerlink" title="基本需求"></a>基本需求</h4><p>下载node.js（node.js官网下载 <a target="_blank" rel="noopener" href="https://nodejs.org/en%EF%BC%89%E4%B8%8B%E8%BD%BD%E5%AE%8C%E6%88%90%E5%90%8E%E4%BD%BF%E7%94%A8node">https://nodejs.org/en）下载完成后使用node</a> -v 和 npm -v可以查看版本。如果从事的工作与nodejs相关介意下载nvm,然后通过nvm下载node。</p>
-<p>介意: 下载完npm后通过npm install -g cnpm –registry&#x3D;<a target="_blank" rel="noopener" href="http://registry.npm.taobao.org下载cnpm依赖.切换npm为淘宝镜像下载速度会比npm快一些/">http://registry.npm.taobao.org下载cnpm依赖。切换npm为淘宝镜像下载速度会比npm快一些</a></p>
-<h4 id="正式步骤"><a href="#正式步骤" class="headerlink" title="正式步骤"></a>正式步骤</h4>
+<h2 id="创建自己的博客并记录创建方法日期-2023-11-27-20-09-09"><a href="#创建自己的博客并记录创建方法日期-2023-11-27-20-09-09" class="headerlink" title="创建自己的博客并记录创建方法日期: 2023-11-27 20:09:09"></a>创建自己的博客并记录创建方法<br>日期: 2023-11-27 20:09:09</h2><h3 id="搭建Hexo博客"><a href="#搭建Hexo博客" class="headerlink" title="搭建Hexo博客"></a>搭建Hexo博客</h3><p>​	使用的是PowerShell命令行，因为cmd没办法直接使用linux的简单命令.也可以在cmd操作但cd的时候要去找文件夹可能会比较麻烦</p>
+<h3 id="基本需求"><a href="#基本需求" class="headerlink" title="基本需求"></a>基本需求</h3><p>​	下载node.js(node.js管网下载 <a target="_blank" rel="noopener" href="https://nodejs.org/en">https://nodejs.org/en</a>)下载完成后使用node -v 和npm -v 可以查看版本。最好先下载nvm，然后通过nvm下载node（先下载node再下nvm会报错</p>
+<p>下载完npm后通过</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=http://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p> 下载cnpm依赖。可以提高下载速度，通过cnpm -v 也可以查看安装是否成功和具体信息</p>
+<h3 id="hexo基本命令"><a href="#hexo基本命令" class="headerlink" title="hexo基本命令"></a>hexo基本命令</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo -v   查看版本</span><br><span class="line">hexo clean   清理hexo缓存</span><br><span class="line">hexo n &quot;文章名&quot; ==  hexo new &quot;文章名&quot;</span><br><span class="line">hexo p  ==  hexo publish   草稿</span><br><span class="line">hexo g  == hexo generate   生成静态网页</span><br><span class="line">hexo s  == hexo server    启动本地静态模式</span><br><span class="line">hexo d  == hexo deploy    推送本地数据到服务器</span><br></pre></td></tr></table></figure>
+
+<h3 id="正式步骤"><a href="#正式步骤" class="headerlink" title="正式步骤"></a>正式步骤</h3><h5 id="步骤一-安装hexo脚手架"><a href="#步骤一-安装hexo脚手架" class="headerlink" title="步骤一:安装hexo脚手架"></a>步骤一:安装hexo脚手架</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-cli -g   //安装hexo脚手架</span><br><span class="line">hexo -v   //查看版本信息</span><br></pre></td></tr></table></figure>
+
+<h5 id="步骤二-使用hexo"><a href="#步骤二-使用hexo" class="headerlink" title="步骤二:使用hexo"></a>步骤二:使用hexo</h5><p>cmd中切换到需要创建博客的盘符再进行以下操作</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir Blog    //创建一个Blog文件夹</span><br><span class="line">hexo init     //初始化一个hexo博客 </span><br><span class="line">hexo s        //运行博客在本地的4000端口(localhost:4000)主要是起到一个预览的作用</span><br></pre></td></tr></table></figure>
+
+<p>浏览器输入localhost:4000可以打开一个脚手架自动生成的一个默认博文</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;博文的名字&quot;       //创建一个自己的博文 hexo n &quot;&quot;  拼全就是hexo new &quot;&quot;,new可以简写成n</span><br><span class="line">cd source/_posts       //到这个路径下再ls看一下是否有刚刚生成的博文</span><br></pre></td></tr></table></figure>
+
+<h5 id="tip-修改博文方法之一是vim的方式修改。window无法直接使用。解决方法如下："><a href="#tip-修改博文方法之一是vim的方式修改。window无法直接使用。解决方法如下：" class="headerlink" title="tip:修改博文方法之一是vim的方式修改。window无法直接使用。解决方法如下："></a>tip:修改博文方法之一是vim的方式修改。window无法直接使用。解决方法如下：</h5><p><em><strong>前提</strong></em>:在powershell中运行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -o gvim90.exe https://ftp.nluug.nl/pub/vim/pc/gvim90.exe ; ./gvim90.exe</span><br></pre></td></tr></table></figure>
+
+<p>  下载vim或者到官网(<a target="_blank" rel="noopener" href="https://www.vim.org/download.php#pc">https://www.vim.org/download.php#pc</a>)自行下载</p>
+<p>1、以管理员身份运行PowerShell</p>
+<p>2、 执行以下命令,并输入Y即可;这个命令大概的意思就是是否允许执行不信息的脚本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned</span><br></pre></td></tr></table></figure>
+
+<p>3、使用new-item命令创建一个配置文件  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new-item -path $profile -itemtype file -force</span><br></pre></td></tr></table></figure>
+
+<p>4、创建完成后在c盘-用户-文档-PowerShell里的Microsoft.PowerShell_profile.ps1文件里加上以下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">set-alias vim &quot;vim.exe的安装位置比如 C:\Program Files (x86)\Vim\vim90\vim.exe是我的vim.exe位置&quot;</span><br><span class="line"> </span><br><span class="line"># To edit the Powershell Profile</span><br><span class="line"># (Not that I&#x27;ll remember this)</span><br><span class="line">Function Edit-Profile</span><br><span class="line">&#123;</span><br><span class="line">    vim $profile</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"># To edit Vim settings</span><br><span class="line">Function Edit-Vimrc</span><br><span class="line">&#123;</span><br><span class="line">    vim $HOME\_vimrc</span><br><span class="line">&#125;</span><br><span class="line">5、最后在powerShell中输入vim出现编辑页面就成功了</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>参考文章  <a target="_blank" rel="noopener" href="http://www.wowotech.net/soft/vim_in_powershell.html">http://www.wowotech.net/soft/vim_in_powershell.html</a></p>
+<p>可以使用vim对博客进行修改也可以使用vscode，hbuildx等编辑软件打开.编写是md的编写格式</p>
+<h5 id="将博客部署到github"><a href="#将博客部署到github" class="headerlink" title="将博客部署到github"></a>将博客部署到github</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i --save hexo-deployer-git            //安装一个git部署插件在Blog文件夹下</span><br></pre></td></tr></table></figure>
+
+<p>首先进入github,new repository新建一个创建，注意仓库地址最好与git名一致方便查找。</p>
+<p>打开Blog文件夹下的_config.yml文件，找到</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: &quot;&quot;</span><br></pre></td></tr></table></figure>
+
+<p>将上面的type: “”向下内容修改为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type: git</span><br><span class="line">  repo: github创建的地址</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>修改完成后控制台输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d       //将hexo博客部署到git首次部署会要求输入git账号密码</span><br></pre></td></tr></table></figure>
+
+<p>部署完之后就可以直接通过网址访问了</p>
+<h5 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h5><p>首先从git上找到自己喜欢的主题clone到Blog文件的themes文件夹下.比如说主题是Blog&#x2F;themes&#x2F;zhuti</p>
+<p>然后修改_config.yml</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: zhuti(上面例子主题文件夹的名称)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
       
 
       
@@ -174,81 +224,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2023/11/28/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%B9%B6%E8%AE%B0%E5%BD%95%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/11/27/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2023/11/27/hello-world/" class="archive-article-date">
-  	<time datetime="2023-11-27T11:49:54.114Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-11-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/11/27/hello-world/">展开全文 >></a>
         </p>
       
 
