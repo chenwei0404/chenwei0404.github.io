@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "陈伟的BLOG • All posts by \"vmware安装遇到的问题汇总\" tag",
+    "description": "哪有小孩一直哭，哪有赌徒一直输。",
+    "home_page_url": "http://example.com",
+    "items": [
+        {
+            "id": "http://example.com/2023/12/13/VMware%E8%99%9A%E6%8B%9F%E5%99%A8%E5%AE%89%E8%A3%85/",
+            "url": "http://example.com/2023/12/13/VMware%E8%99%9A%E6%8B%9F%E5%99%A8%E5%AE%89%E8%A3%85/",
+            "title": "VMware虚拟器安装",
+            "date_published": "2023-12-13T10:40:17.000Z",
+            "content_html": "<h3 id=\"1-vmware虚拟机下载地址\"><a class=\"markdownIt-Anchor\" href=\"#1-vmware虚拟机下载地址\">#</a> 1、VMware 虚拟机下载地址</h3>\n<p>VMware Workstation Pro 虚拟机下载地址:<a href=\"VMware%E4%B8%8B%E8%BD%BD%E7%BD%91%E5%9D%80\">https://customerconnect.vmware.com/cn/downloads/info/slug/desktop_end_user_computing/vmware_workstation_pro/17_0</a></p>\n<p>Centos 镜像下载地址：<a href=\"centos%E9%95%9C%E5%83%8F\">https://mirrors.tuna.tsinghua.edu.cn/centos/7.9.2009/isos/x86_64/</a></p>\n<p>VMware 英文注册地址 (千万不要切成中文，原因下方 tip 解释，密码校验是大小写字母 + 数字 + 特殊字符，国家可以选择美国地区)：<a href=\"%E8%8B%B1%E6%96%87%E5%9C%B0%E5%9D%80\">https://customerconnect.vmware.com/account-registration</a></p>\n<p>可以成功注册的例子:</p>\n<p>​\tEmail address： 填写正确的邮箱，需要用邮箱验证</p>\n<p>​\tCity： Sacramento</p>\n<p>​\tZip or postal code： 94203</p>\n<p>​\tCountry/Territory： United States</p>\n<p>​\tState or province： California</p>\n<p>​\tBusiness phone： 0013602923672<br>\n​\t原文例子链接：<a href=\"https://blog.csdn.net/weixin_42417351/article/details/128042004\">https://blog.csdn.net/weixin_42417351/article/details/128042004</a></p>\n<h5 id=\"tip下载vmware的时候改成中文注册页会出现的问题\"><a class=\"markdownIt-Anchor\" href=\"#tip下载vmware的时候改成中文注册页会出现的问题\">#</a> tip: 下载 VMware 的时候改成中文注册页会出现的问题</h5>\n<p>​\t注册页面一定要是英文的，中文的会无法校验验证码，下图是中文页面的情况：</p>\n<p><img src=\"C:%5CUsers%5Cchen'wei%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231213190324189.png\" alt=\"image-20231213190324189\"></p>\n<p>正确情况应该是下图这样的：</p>\n<p><img src=\"C:%5CUsers%5Cchen'wei%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231213190539927.png\" alt=\"image-20231213190539927\"></p>\n<p>安装后 VMware pro17 的密钥: JU090-6039P-08409-8J0QH-2YR7F</p>\n<h3 id=\"2-centos设备中文\"><a class=\"markdownIt-Anchor\" href=\"#2-centos设备中文\">#</a> 2、Centos 设备中文</h3>\n<p>​\tcentos 在进入时如果忘了配置那打开后会是英文的，如果想要配置中文可以根据以下步骤:</p>\n<p>1、显示当前语言，英文状态下唤起右击菜单，点击 Open Terminal 打开终端</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">localectl status</span><br><span class=\"line\">\t/*回车后展示以下内容，LANG=en_US.UTF-8就是当前的语言*/</span><br><span class=\"line\">\tSystem Locale: LANG=en_US.UTF-8</span><br><span class=\"line\">       VC Keymap: us</span><br><span class=\"line\">      X11 Layout: us</span><br></pre></td></tr></table></figure>\n<p>2、修改语言为中文</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">/*LANG=跟的是语言的类型zh_CN.UTF-8可以修改成中文，en_US.UTF-8可以修改为英文*/</span><br><span class=\"line\">localectl set-locale LANG=zh_CN.UTF-8</span><br></pre></td></tr></table></figure>\n<p>参考链接：<a href=\"https://www.cnblogs.com/liulianzhen99/articles/17668096.html\">https://www.cnblogs.com/liulianzhen99/articles/17668096.html</a></p>\n",
+            "tags": [
+                "VMware安装遇到的问题汇总"
+            ]
+        }
+    ]
+}

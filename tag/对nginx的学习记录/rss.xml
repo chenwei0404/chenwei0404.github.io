@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>陈伟的BLOG • Posts by &#34;对nginx的学习记录&#34; tag</title>
+        <link>http://example.com</link>
+        <description>哪有小孩一直哭，哪有赌徒一直输。</description>
+        <language>zh-CN</language>
+        <pubDate>Wed, 13 Dec 2023 16:17:15 +0800</pubDate>
+        <lastBuildDate>Wed, 13 Dec 2023 16:17:15 +0800</lastBuildDate>
+        <category>VMware安装遇到的问题汇总</category>
+        <category>对Nginx的学习记录</category>
+        <category>工具</category>
+        <category>hexo</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2023/12/13/Nginx%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86%E5%92%8C%E5%A4%8D%E4%B9%A0/</guid>
+            <title>Nginx知识整理和复习</title>
+            <link>http://example.com/2023/12/13/Nginx%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86%E5%92%8C%E5%A4%8D%E4%B9%A0/</link>
+            <category>对Nginx的学习记录</category>
+            <pubDate>Wed, 13 Dec 2023 16:17:15 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;基础知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基础知识&#34;&gt;#&lt;/a&gt; 基础知识&lt;/h4&gt;
+&lt;p&gt;​	Nginx 是一个 HTTP 和反向代理的 web 服务器，是由俄罗斯人伊戈尔・赛索耶夫为 Rambler.ru 站点开发的。&lt;/p&gt;
+&lt;p&gt;​	Nginx 具有占用内存少，并发能力强，支持热部署，高性能，高可靠，最最最重要的免费并可以用于商业化等优点&lt;/p&gt;
+&lt;p&gt;​	Nginx 的主要使用场景包括:&lt;/p&gt;
+&lt;p&gt;​		1、web 服务器：作为 web 服务器时，可以处理连接请求，提供静态资源文件。&lt;/p&gt;
+&lt;p&gt;​		2、反向代理服务器：作为反向代理服务器时，可以将请求转发给后端的应用服务器，同时负责处理负载均衡和缓存等任务。&lt;/p&gt;
+&lt;p&gt;​		3、负载均衡器：作为负载均衡器时，可以作为高性能的负载均衡器使用，将请求分发到多个应用服务器，从面提高系统的并发能力和可用性。&lt;/p&gt;
+&lt;p&gt;​		4、HTTP 缓存服务器：作为 HTTP 缓存服务器时，可以缓存常见的静态资源，从而提高访问速度和用户体验。&lt;/p&gt;
+&lt;p&gt;​	同时 Nginx 和 Nodejs 有很多类似的地方比如说都是基于事件驱动的非阻塞 I/O 模型，可以在高负载情况下保持良好的响应速度；都能够在多核 CPU 上运行，可以通过集群方式来实现横向扩展；也都有灵活的模块化架构，可以通过插件或模块来满足不同的需求；都适合处理大量连接和数据，并且数据传输过程中，采用的都是高效协议和算法能保证网络传输效率。但 Nginx 和 nodejs 各有各的一片天！Nginx 擅长于底层服务端资源处理，Nodejs 更擅长上层具体业务逻辑的处理。&lt;/p&gt;
+&lt;h4 id=&#34;nginx快速安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#nginx快速安装&#34;&gt;#&lt;/a&gt; Nginx 快速安装&lt;/h4&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
