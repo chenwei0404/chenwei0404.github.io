@@ -21,25 +21,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="哪有小孩一直哭，哪有赌徒一直输。">
-<meta property="og:type" content="website">
+    <meta name="description" content="1234title: vue组件通信date: 2024-02-27 21:45:55description: 摘要:对vue的子传父、父传子、bus事件总线和vuex的具体使用方法进行整理。tags: # vue 组件通信 # 子传父">
+<meta property="og:type" content="article">
 <meta property="og:title" content="陈伟的BLOG">
-<meta property="og:url" content="http://example.com/categories/%E5%B7%A5%E5%85%B7/hexo/index.html">
+<meta property="og:url" content="http://example.com/2024/02/27/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/index.html">
 <meta property="og:site_name" content="陈伟的BLOG">
-<meta property="og:description" content="哪有小孩一直哭，哪有赌徒一直输。">
+<meta property="og:description" content="1234title: vue组件通信date: 2024-02-27 21:45:55description: 摘要:对vue的子传父、父传子、bus事件总线和vuex的具体使用方法进行整理。tags: # vue 组件通信 # 子传父">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-02-27T14:41:54.496Z">
+<meta property="article:modified_time" content="2024-02-27T14:48:33.448Z">
 <meta property="article:author" content="陈伟">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/categories/%E5%B7%A5%E5%85%B7/hexo/">
+<link rel="canonical" href="http://example.com/2024/02/27/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"categories/工具/hexo/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2024/02/27/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/","path":"2024/02/27/vue组件通信/","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>分类: hexo | 陈伟的BLOG</title>
+<title> | 陈伟的BLOG</title>
   
 
 
@@ -103,7 +105,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -116,6 +118,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1"><span class="nav-number">1.</span> <span class="nav-text"> vue 组件通信</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AD%90%E4%BC%A0%E7%88%B6"><span class="nav-number">1.1.</span> <span class="nav-text"> 子传父</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -167,50 +170,133 @@
 
     </div>
 
-    <div class="main-inner category posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">hexo
-          <small>分类</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/27/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.jpeg">
+      <meta itemprop="name" content="陈伟">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈伟的BLOG">
+      <meta itemprop="description" content="哪有小孩一直哭，哪有赌徒一直输。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 陈伟的BLOG">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
         </h1>
-      </div>
 
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2023</span>
+
+      <time title="创建时间：2024-02-27 22:41:54 / 修改时间：22:48:33" itemprop="dateCreated datePublished" datetime="2024-02-27T22:41:54+08:00">2024-02-27</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: vue组件通信</span><br><span class="line">date: 2024-02-27 21:45:55</span><br><span class="line">description: 摘要:对vue的子传父、父传子、bus事件总线和vuex的具体使用方法进行整理。</span><br><span class="line">tags:</span><br></pre></td></tr></table></figure>
+<h4 id="vue组件通信"><a class="markdownIt-Anchor" href="#vue组件通信">#</a> vue 组件通信</h4>
+<h5 id="子传父"><a class="markdownIt-Anchor" href="#子传父">#</a> 子传父</h5>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-11-28T19:43:05+08:00"
-              content="2023-11-28">
-          11-28
-        </time>
-      </div>
-
-      <div class="post-title">
-        <a class="post-title-link" href="/2023/11/28/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%B9%B6%E8%AE%B0%E5%BD%95%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95/" itemprop="url">
-          <span itemprop="name">创建Hexo博客</span>
-        </a>
-      </div>
-
+    
+    
+    
+    <div>
       
-    </header>
-  </article>
-
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
     </div>
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>陈伟
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2024/02/27/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/" title="">http://example.com/2024/02/27/vue组件通信/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-Hans" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
   </div>
-  
-  
-  
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/02/27/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/" rel="prev" title="面试题汇总">
+                  <i class="fa fa-angle-left"></i> 面试题汇总
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
 
 </div>
   </main>

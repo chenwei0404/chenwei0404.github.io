@@ -21,15 +21,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="# 搭建 Hexo 博客 ​	使用的是 PowerShell 命令行，因为 cmd 没办法直接使用 linux 的简单命令。也可以在 cmd 操作但 cd 的时候要去找文件夹可能会比较麻烦 # 基本需求 ​	下载 node.js (node.js 官网) 下载完成后使用 node -v 和 npm -v 可以查看版本。最好先下载 nvm，然后通过 nvm 下载 node（先下载 node 再下 n">
+    <meta name="description" content="摘要:本文主要使用Next + Hexo搭建，记录了本人搭建过程及过程中遇到的问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="创建博客并对博客进行优化">
+<meta property="og:title" content="创建Hexo博客">
 <meta property="og:url" content="http://example.com/2023/11/28/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%B9%B6%E8%AE%B0%E5%BD%95%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="陈伟的BLOG">
-<meta property="og:description" content="# 搭建 Hexo 博客 ​	使用的是 PowerShell 命令行，因为 cmd 没办法直接使用 linux 的简单命令。也可以在 cmd 操作但 cd 的时候要去找文件夹可能会比较麻烦 # 基本需求 ​	下载 node.js (node.js 官网) 下载完成后使用 node -v 和 npm -v 可以查看版本。最好先下载 nvm，然后通过 nvm 下载 node（先下载 node 再下 n">
+<meta property="og:description" content="摘要:本文主要使用Next + Hexo搭建，记录了本人搭建过程及过程中遇到的问题">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-28T11:43:05.000Z">
-<meta property="article:modified_time" content="2024-01-02T17:34:50.431Z">
+<meta property="article:modified_time" content="2024-02-27T14:23:33.262Z">
 <meta property="article:author" content="陈伟">
 <meta property="article:tag" content="工具">
 <meta property="article:tag" content="hexo">
@@ -40,10 +40,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":"","permalink":"http://example.com/2023/11/28/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%B9%B6%E8%AE%B0%E5%BD%95%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95/","path":"2023/11/28/创建自己的博客并记录创建方法/","title":"创建博客并对博客进行优化"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":"","permalink":"http://example.com/2023/11/28/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%B9%B6%E8%AE%B0%E5%BD%95%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95/","path":"2023/11/28/创建自己的博客并记录创建方法/","title":"创建Hexo博客"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>创建博客并对博客进行优化 | 陈伟的BLOG</title>
+<title>创建Hexo博客 | 陈伟的BLOG</title>
   
 
 
@@ -120,7 +120,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2"><span class="nav-number">1.</span> <span class="nav-text"> 搭建 Hexo 博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E9%9C%80%E6%B1%82"><span class="nav-number">2.</span> <span class="nav-text"> 基本需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="nav-number">3.</span> <span class="nav-text"> hexo 基本命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%BC%8F%E6%AD%A5%E9%AA%A4"><span class="nav-number">4.</span> <span class="nav-text"> 正式步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%80%E5%AE%89%E8%A3%85hexo%E8%84%9A%E6%89%8B%E6%9E%B6"><span class="nav-number">4.0.1.</span> <span class="nav-text"> 步骤一：安装 hexo 脚手架</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%BA%8C%E4%BD%BF%E7%94%A8hexo"><span class="nav-number">4.0.2.</span> <span class="nav-text"> 步骤二：使用 hexo</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#tip%E4%BF%AE%E6%94%B9%E5%8D%9A%E6%96%87%E6%96%B9%E6%B3%95%E4%B9%8B%E4%B8%80%E6%98%AFvim%E7%9A%84%E6%96%B9%E5%BC%8F%E4%BF%AE%E6%94%B9-window%E6%97%A0%E6%B3%95%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%E5%A6%82%E4%B8%8B"><span class="nav-number">4.0.3.</span> <span class="nav-text"> tip: 修改博文方法之一是 vim 的方式修改。window 无法直接使用。解决方法如下：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B0%86%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0github"><span class="nav-number">4.0.4.</span> <span class="nav-text"> 将博客部署到 github</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0readmemd%E6%B8%B2%E6%9F%93%E6%A0%BC%E5%BC%8F"><span class="nav-number">4.0.5.</span> <span class="nav-text"> 添加 README.md 渲染格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98"><span class="nav-number">4.0.6.</span> <span class="nav-text"> 修改主题</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8next%E4%B8%BB%E9%A2%98"><span class="nav-number">4.1.</span> <span class="nav-text"> 使用 Next 主题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%89%E8%A3%85next%E4%B8%BB%E9%A2%98%E6%88%91%E4%BD%BF%E7%94%A8%E7%9A%84next%E7%9A%84github%E9%93%BE%E6%8E%A5"><span class="nav-number">4.1.1.</span> <span class="nav-text"> 安装 Next 主题（我使用的 next 的 gitHub 链接）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#next%E7%9A%84%E9%A1%B5%E9%9D%A2%E6%A0%B7%E5%BC%8F%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE%E9%A1%B9%E5%85%A8%E9%83%BD%E5%9C%A8%E4%B8%BB%E9%A2%98%E6%96%87%E4%BB%B6%E7%9A%84_configyml%E4%B8%AD%E4%BF%AE%E6%94%B9"><span class="nav-number">4.1.2.</span> <span class="nav-text"> Next 的页面样式优化 (配置项全都在主题文件的_config.yml 中修改)</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E5%B8%83%E5%B1%80"><span class="nav-number">4.1.2.1.</span> <span class="nav-text"> 设置布局</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E8%AE%A2%E9%98%85"><span class="nav-number">4.1.2.2.</span> <span class="nav-text"> 添加订阅</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%82%B9%E5%87%BB%E5%87%BA%E7%8E%B0%E6%A1%83%E5%BF%83%E6%95%88%E6%9E%9C"><span class="nav-number">4.1.2.3.</span> <span class="nav-text"> 点击出现桃心效果</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%9C%A8%E6%96%87%E7%AB%A0%E7%BB%93%E5%B0%BE%E5%A4%84%E6%B7%BB%E5%8A%A0%E7%B1%BB%E4%BC%BC%E4%BA%8E%E6%9C%AC%E6%96%87%E7%BB%93%E6%9D%9F%E7%9A%84%E6%A0%87%E8%AE%B0"><span class="nav-number">4.1.2.4.</span> <span class="nav-text"> 在文章结尾处添加类似于 “本文结束” 的标记</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E8%AE%BF%E5%AE%A2%E6%95%B0%E9%87%8F"><span class="nav-number">4.1.2.5.</span> <span class="nav-text"> 添加访客数量</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD"><span class="nav-number">4.1.2.6.</span> <span class="nav-text"> 添加统计功能</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%8A%A0%E8%BD%BD%E6%95%88%E6%9E%9C%E7%B1%BB%E4%BC%BCloading"><span class="nav-number">4.1.2.7.</span> <span class="nav-text"> 添加加载效果 (类似 Loading)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E7%89%88%E6%9D%83"><span class="nav-number">4.1.2.8.</span> <span class="nav-text"> 添加版权</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E9%9C%80%E6%B1%82"><span class="nav-number">1.</span> <span class="nav-text"> 基本需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="nav-number">2.</span> <span class="nav-text"> hexo 基本命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%BC%8F%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.</span> <span class="nav-text"> 正式步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%80%E5%AE%89%E8%A3%85hexo%E8%84%9A%E6%89%8B%E6%9E%B6"><span class="nav-number">3.0.1.</span> <span class="nav-text"> 步骤一：安装 hexo 脚手架</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%BA%8C%E4%BD%BF%E7%94%A8hexo"><span class="nav-number">3.0.2.</span> <span class="nav-text"> 步骤二：使用 hexo</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#tip%E4%BF%AE%E6%94%B9%E5%8D%9A%E6%96%87%E6%96%B9%E6%B3%95%E4%B9%8B%E4%B8%80%E6%98%AFvim%E7%9A%84%E6%96%B9%E5%BC%8F%E4%BF%AE%E6%94%B9-window%E6%97%A0%E6%B3%95%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%E5%A6%82%E4%B8%8B"><span class="nav-number">3.0.3.</span> <span class="nav-text"> tip: 修改博文方法之一是 vim 的方式修改。window 无法直接使用。解决方法如下：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B0%86%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0github"><span class="nav-number">3.0.4.</span> <span class="nav-text"> 将博客部署到 github</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0readmemd%E6%B8%B2%E6%9F%93%E6%A0%BC%E5%BC%8F"><span class="nav-number">3.0.5.</span> <span class="nav-text"> 添加 README.md 渲染格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98"><span class="nav-number">3.0.6.</span> <span class="nav-text"> 修改主题</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8next%E4%B8%BB%E9%A2%98"><span class="nav-number">3.1.</span> <span class="nav-text"> 使用 Next 主题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%89%E8%A3%85next%E4%B8%BB%E9%A2%98%E6%88%91%E4%BD%BF%E7%94%A8%E7%9A%84next%E7%9A%84github%E9%93%BE%E6%8E%A5"><span class="nav-number">3.1.1.</span> <span class="nav-text"> 安装 Next 主题（我使用的 next 的 gitHub 链接）</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -135,7 +135,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -156,7 +156,15 @@
 
         </div>
       </div>
+
+      <div>
+        <link rel="stylesheet" href="/dist/APlayer.min.css">
+        <div id="aplayer"></div>
+        <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+        <script type="text/javascript" src="/dist/music.js"></script>
+      </div>
     </div>
+
 
     
   </aside>
@@ -188,12 +196,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="创建博客并对博客进行优化 | 陈伟的BLOG">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="创建Hexo博客 | 陈伟的BLOG">
+      <meta itemprop="description" content="摘要:本文主要使用Next + Hexo搭建，记录了本人搭建过程及过程中遇到的问题">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          创建博客并对博客进行优化
+          创建Hexo博客
         </h1>
 
         <div class="post-meta-container">
@@ -211,7 +219,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-01-03 01:34:50" itemprop="dateModified" datetime="2024-01-03T01:34:50+08:00">2024-01-03</time>
+      <time title="修改时间：2024-02-27 22:23:33" itemprop="dateModified" datetime="2024-02-27T22:23:33+08:00">2024-02-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -230,15 +238,14 @@
   
 </div>
 
+            <div class="post-description">摘要:本文主要使用Next + Hexo搭建，记录了本人搭建过程及过程中遇到的问题</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="搭建hexo博客"><a class="markdownIt-Anchor" href="#搭建hexo博客">#</a> 搭建 Hexo 博客</h3>
-<p>​	使用的是 PowerShell 命令行，因为 cmd 没办法直接使用 linux 的简单命令。也可以在 cmd 操作但 cd 的时候要去找文件夹可能会比较麻烦</p>
-<h3 id="基本需求"><a class="markdownIt-Anchor" href="#基本需求">#</a> 基本需求</h3>
+    <div class="post-body" itemprop="articleBody"><h3 id="基本需求"><a class="markdownIt-Anchor" href="#基本需求">#</a> 基本需求</h3>
 <p>​	下载 node.js (<a target="_blank" rel="noopener" href="https://nodejs.org/en">node.js 官网</a>) 下载完成后使用 node -v 和 npm -v 可以查看版本。最好先下载 nvm，然后通过 nvm 下载 node（先下载 node 再下 nvm 会报错</p>
 <p>下载完 npm 后通过</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=http://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
@@ -294,47 +301,6 @@
 <p>然后在 Blog 文件夹下的_config.yml 文件中将主题修改为 next</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme:next</span><br></pre></td></tr></table></figure>
 <p>这样使用 hexo s 生成静态网站就可以看到我们的博客主题已经变成了 Next 主题</p>
-<h5 id="next的页面样式优化配置项全都在主题文件的_configyml中修改"><a class="markdownIt-Anchor" href="#next的页面样式优化配置项全都在主题文件的_configyml中修改">#</a> Next 的页面样式优化 (配置项全都在主题文件的_config.yml 中修改)</h5>
-<h6 id="设置布局"><a class="markdownIt-Anchor" href="#设置布局">#</a> 设置布局</h6>
-<p>首先在主题文件的_config.yml 中可以看到 schemes 配置主要分为 muse (默认),mist,pisces,gemini 可以根据想要的效果自己切换</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Schemes</span><br><span class="line"># scheme: Muse</span><br><span class="line"># scheme: Mist</span><br><span class="line"># scheme: Pisces</span><br><span class="line"># scheme: Gemini</span><br></pre></td></tr></table></figure>
-<h6 id="添加订阅"><a class="markdownIt-Anchor" href="#添加订阅">#</a> 添加订阅</h6>
-<p>打开主题文件夹的_config.yml 搜索 follow_me 只要添加以下代码就可以</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RSS: /atom.xml || fa fa-rss</span><br></pre></td></tr></table></figure>
-<p>完成之后点击进任意一个文章，下拉到最下方就可以打到一个 RSS 的订阅标签，在主页是没有标签的。</p>
-<h6 id="点击出现桃心效果"><a class="markdownIt-Anchor" href="#点击出现桃心效果">#</a> 点击出现桃心效果</h6>
-<p>需要在 themes\hexo-theme-next\source\js 文件夹下操作</p>
-<p>创建一个 clickLove.js 文件并将以下内容粘贴进去</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">!function (e, t, a) &#123;</span><br><span class="line">    function n() &#123;</span><br><span class="line">        c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &#x27;&#x27;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;), o(), r()</span><br><span class="line">    &#125; function r() &#123; for (var e = 0; e &lt; d.length; e++)d[e].alpha &lt;= 0 ? (t.body.removeChild(d[e].el), d.splice(e, 1)) : (d[e].y--, d[e].scale += .004, d[e].alpha -= .013, d[e].el.style.cssText = &quot;left:&quot; + d[e].x + &quot;px;top:&quot; + d[e].y + &quot;px;opacity:&quot; + d[e].alpha + &quot;;transform:scale(&quot; + d[e].scale + &quot;,&quot; + d[e].scale + &quot;) rotate(45deg);background:&quot; + d[e].color + &quot;;z-index:99999&quot;); requestAnimationFrame(r) &#125; function o() &#123; var t = &quot;function&quot; == typeof e.onclick &amp;&amp; e.onclick; e.onclick = function (e) &#123; t &amp;&amp; t(), i(e) &#125; &#125; function i(e) &#123; var a = t.createElement(&quot;div&quot;); a.className = &quot;heart&quot;, d.push(&#123; el: a, x: e.clientX - 5, y: e.clientY - 5, scale: 1, alpha: 1, color: s() &#125;), t.body.appendChild(a) &#125; function c(e) &#123; var a = t.createElement(&quot;style&quot;); a.type = &quot;text/css&quot;; try &#123; a.appendChild(t.createTextNode(e)) &#125; catch (t) &#123; a.styleSheet.cssText = e &#125; t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a) &#125; function s() &#123; return &quot;rgb(&quot; + ~~(255 * Math.random()) + &quot;,&quot; + ~~(255 * Math.random()) + &quot;,&quot; + ~~(255 * Math.random()) + &quot;)&quot; &#125; var d = []; e.requestAnimationFrame = function () &#123; return e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) &#123; setTimeout(e, 1e3 / 60) &#125; &#125;(), n()</span><br><span class="line">&#125;(window, document);</span><br></pre></td></tr></table></figure>
-<p>然后在 themes\hexo-theme-next\layout_layout.njk 文件的<head></head>中间区域添加</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/clicklove.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>完成之后点击博客区域就可以看到爱心飘出来了。</p>
-<h6 id="在文章结尾处添加类似于本文结束的标记"><a class="markdownIt-Anchor" href="#在文章结尾处添加类似于本文结束的标记">#</a> 在文章结尾处添加类似于 “本文结束” 的标记</h6>
-<p>在 themes\hexo-theme-next\layout\ _macro 中新建一个文件 passage-end-tag.njk 并添加类似以下内容</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &#123;% if not is_index %&#125;</span><br><span class="line">        &lt;div style=&quot;text-align:center;color: #ccc;font-size:14px;&quot;&gt;-------------本文结束&lt;i class=&quot;fa fa-paw&quot;&gt;&lt;/i&gt;感谢您的阅读-------------&lt;/div&gt;</span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p>然后再打开 themes\hexo-theme-next\layout\ _macro\post.njk 文件，搜索 post-footer 然后在前方添加以下代码</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">   &#123;% if not is_index %&#125;</span><br><span class="line">     &#123;% include &#x27;passage-end-tag.njk&#x27; %&#125;</span><br><span class="line">   &#123;% endif %&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p>然后在主题的_config.yml 中添加</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passage_end_tag: true</span><br></pre></td></tr></table></figure>
-<p>最后打开任意一个博文翻到最后一页就可以看到刚刚添加的效果</p>
-<h6 id="添加访客数量"><a class="markdownIt-Anchor" href="#添加访客数量">#</a> 添加访客数量</h6>
-<p>打开 themes\hexo-theme-next\layout\ _partials\footer.njk</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//首先在class=&quot;copyright&quot;的div标签上方添加以下代码</span><br><span class="line">&lt;script async src=&quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">//然后在希望出现访客数量的地方添加，本人放在了主页最下方，所以是在footer.njk文件的powered-by上方添加的</span><br><span class="line">&lt;div class=&quot;powered-by&quot;&gt;</span><br><span class="line">&lt;i class=&quot;fa fa-user-md&quot;&gt;&lt;/i&gt;&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;</span><br><span class="line">  本站访客数:&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;</span><br><span class="line">&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p>访问数量统计有两个方法：</p>
-<p>1、pv, 是指单个用户连续点击 N 个文章就记录 N 次</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;</span><br><span class="line">    本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
-<p>2、uv, 是指单个用户点击 N 个文章只记录 1 次</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;</span><br><span class="line">  本站总访问量&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;次</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
-<h6 id="添加统计功能"><a class="markdownIt-Anchor" href="#添加统计功能">#</a> 添加统计功能</h6>
-<p>包括字数统计，阅读时长统计等</p>
-<p>在 \themes\hexo-theme-next_config.yml 中配置找到以下内容修改即可</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># Post wordcount display settings</span><br><span class="line"># Dependencies: https://github.com/next-theme/hexo-word-counter</span><br><span class="line">symbols_count_time:</span><br><span class="line">  # 是否另起一行（true的话不和发表时间等同一行）</span><br><span class="line">  separated_meta: true</span><br><span class="line">  # 首页文章统计数量前是否显示文字描述（本文字数、阅读时长）</span><br><span class="line">  item_text_post: true</span><br><span class="line">  # 页面底部统计数量前是否显示文字描述（站点总字数、站点阅读时长）</span><br><span class="line">  item_text_total: true</span><br></pre></td></tr></table></figure>
-<h6 id="添加加载效果类似loading"><a class="markdownIt-Anchor" href="#添加加载效果类似loading">#</a> 添加加载效果 (类似 Loading)</h6>
-<p>查看_config.yml 中是否有 pace 配置项。如果有将 enable 改为 true 即可。如果是老版的 next 的话可能会没有这个配置项需要去引用。详细方法可见 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/28128674?utm_id=0">老版 next 解决点击此处，查看第 19 个节</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># Progress bar in the top during page loading.</span><br><span class="line"># For more information: https://github.com/CodeByZach/pace</span><br><span class="line">pace:</span><br><span class="line">  enable: true</span><br><span class="line">  # All available colors:</span><br><span class="line">  # black | blue | green | orange | pink | purple | red | silver | white | yellow</span><br><span class="line">  color: blue</span><br><span class="line">  # All available themes:</span><br><span class="line">  # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple</span><br><span class="line">  # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal  这些是一些加载效果，顶部加载进度条是minimal,material是类似一个Loading效果，可以切换自己想要的效果</span><br><span class="line">  theme: minimal</span><br></pre></td></tr></table></figure>
-<h6 id="添加版权"><a class="markdownIt-Anchor" href="#添加版权">#</a> 添加版权</h6>
-<p>_config.yml 中搜索下面的关键字，将 sidebar，post 值改为 true 就可以看到版本声明了</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># Creative Commons 4.0 International License.</span><br><span class="line"># See: https://creativecommons.org/about/cclicenses/</span><br><span class="line"># 版权</span><br><span class="line">creative_commons:</span><br><span class="line">  # Available values: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | cc-zero</span><br><span class="line">  license: by-nc-sa  # 许可证</span><br><span class="line">  # Available values: big | small</span><br><span class="line">  size: small</span><br><span class="line">  sidebar: true  # 侧边栏展示</span><br><span class="line">  post: true   # 底部展示</span><br><span class="line">  # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh</span><br><span class="line">  # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org</span><br><span class="line">  language: zh-Hans</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -361,7 +327,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://example.com/2023/11/28/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%B9%B6%E8%AE%B0%E5%BD%95%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95/" title="创建博客并对博客进行优化">http://example.com/2023/11/28/创建自己的博客并记录创建方法/</a>
+      <a href="http://example.com/2023/11/28/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%B9%B6%E8%AE%B0%E5%BD%95%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95/" title="创建Hexo博客">http://example.com/2023/11/28/创建自己的博客并记录创建方法/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-Hans" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -431,7 +397,7 @@
   <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
     本站访客数:<span id="busuanzi_value_site_uv"></span>
   </span>
-  <span class="post-count">博客全站共3.7k字</span>
+  <span class="post-count">博客全站共5.3k字</span>
   </div>
 
   <!-- <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

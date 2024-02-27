@@ -1,26 +1,28 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>陈伟的BLOG • Posts by &#34;vmware安装遇到的问题汇总&#34; tag</title>
+        <title>陈伟的BLOG • Posts by &#34;vmware安装遇到的问题汇总摘要&#34; tag</title>
         <link>http://example.com</link>
         <description>哪有小孩一直哭，哪有赌徒一直输。</description>
         <language>zh-CN</language>
         <pubDate>Wed, 13 Dec 2023 18:40:17 +0800</pubDate>
         <lastBuildDate>Wed, 13 Dec 2023 18:40:17 +0800</lastBuildDate>
-        <category>VMware安装遇到的问题汇总</category>
         <category>对Nginx的学习记录</category>
+        <category>VMware安装遇到的问题汇总摘要</category>
         <category>工具</category>
         <category>hexo</category>
         <item>
             <guid isPermalink="true">http://example.com/2023/12/13/VMware%E8%99%9A%E6%8B%9F%E5%99%A8%E5%AE%89%E8%A3%85/</guid>
             <title>VMware虚拟器安装</title>
             <link>http://example.com/2023/12/13/VMware%E8%99%9A%E6%8B%9F%E5%99%A8%E5%AE%89%E8%A3%85/</link>
-            <category>VMware安装遇到的问题汇总</category>
+            <category>VMware安装遇到的问题汇总摘要</category>
             <pubDate>Wed, 13 Dec 2023 18:40:17 +0800</pubDate>
-            <description><![CDATA[ &lt;h3 id=&#34;1-vmware虚拟机下载地址&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-vmware虚拟机下载地址&#34;&gt;#&lt;/a&gt; 1、VMware 虚拟机下载地址&lt;/h3&gt;
-&lt;p&gt;VMware Workstation Pro 虚拟机下载地址:&lt;a href=&#34;VMware%E4%B8%8B%E8%BD%BD%E7%BD%91%E5%9D%80&#34;&gt;https://customerconnect.vmware.com/cn/downloads/info/slug/desktop_end_user_computing/vmware_workstation_pro/17_0&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Centos 镜像下载地址：&lt;a href=&#34;centos%E9%95%9C%E5%83%8F&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/centos/7.9.2009/isos/x86_64/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;VMware 英文注册地址 (千万不要切成中文，原因下方 tip 解释，密码校验是大小写字母 + 数字 + 特殊字符，国家可以选择美国地区)：&lt;a href=&#34;%E8%8B%B1%E6%96%87%E5%9C%B0%E5%9D%80&#34;&gt;https://customerconnect.vmware.com/account-registration&lt;/a&gt;&lt;/p&gt;
+            <description><![CDATA[ &lt;h5 id=&#34;摘要本文主要记录了vmware虚拟机的安装和centos镜像的下载-在开发-生产-教学过程中需要使用不同的操作系统都可以通过虚拟机调试来完成从而达到降低成本的目的&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#摘要本文主要记录了vmware虚拟机的安装和centos镜像的下载-在开发-生产-教学过程中需要使用不同的操作系统都可以通过虚拟机调试来完成从而达到降低成本的目的&#34;&gt;#&lt;/a&gt; 摘要：本文主要记录了 VMware 虚拟机的安装和 Centos 镜像的下载。在开发、生产、教学过程中需要使用不同的操作系统都可以通过虚拟机调试来完成，从而达到降低成本的目的。&lt;/h5&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;h3 id=&#34;1-vmware虚拟机下载地址&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-vmware虚拟机下载地址&#34;&gt;#&lt;/a&gt; 1、VMware 虚拟机下载地址&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://customerconnect.vmware.com/cn/downloads/info/slug/desktop_end_user_computing/vmware_workstation_pro/17_0&#34;&gt;VMware Workstation Pro 虚拟机下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/centos/7.9.2009/isos/x86_64/&#34;&gt;Centos 镜像下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;千万不要进入 VMware 注册页面就切换为中文 (下方有原因图片展示)，密码校验是大小写字母 + 数字 + 特殊字符，国家可以选择美国地区；&lt;a href=&#34;https://customerconnect.vmware.com/account-registration&#34;&gt;VMware 英文注册地址 (不要切换为中文哦！！！)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;可以成功注册的例子:&lt;/p&gt;
 &lt;p&gt;​	Email address： 填写正确的邮箱，需要用邮箱验证&lt;/p&gt;
 &lt;p&gt;​	City： Sacramento&lt;/p&gt;
@@ -28,7 +30,7 @@
 &lt;p&gt;​	Country/Territory： United States&lt;/p&gt;
 &lt;p&gt;​	State or province： California&lt;/p&gt;
 &lt;p&gt;​	Business phone： 0013602923672&lt;br&gt;
-​	原文例子链接：&lt;a href=&#34;https://blog.csdn.net/weixin_42417351/article/details/128042004&#34;&gt;https://blog.csdn.net/weixin_42417351/article/details/128042004&lt;/a&gt;&lt;/p&gt;
+​	&lt;a href=&#34;https://blog.csdn.net/weixin_42417351/article/details/128042004&#34;&gt;上面注册参数原文链接&lt;/a&gt;&lt;/p&gt;
 &lt;h5 id=&#34;tip下载vmware的时候改成中文注册页会出现的问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#tip下载vmware的时候改成中文注册页会出现的问题&#34;&gt;#&lt;/a&gt; tip: 下载 VMware 的时候改成中文注册页会出现的问题&lt;/h5&gt;
 &lt;p&gt;​	注册页面一定要是英文的，中文的会无法校验验证码，下图是中文页面的情况：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;C:%5CUsers%5Cchen&#39;wei%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231213190324189.png&#34; alt=&#34;image-20231213190324189&#34;&gt;&lt;/p&gt;
@@ -41,7 +43,7 @@
 &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;localectl status&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	/*回车后展示以下内容，LANG=en_US.UTF-8就是当前的语言*/&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	System Locale: LANG=en_US.UTF-8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       VC Keymap: us&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      X11 Layout: us&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;2、修改语言为中文&lt;/p&gt;
 &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;/*LANG=跟的是语言的类型zh_CN.UTF-8可以修改成中文，en_US.UTF-8可以修改为英文*/&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;localectl set-locale LANG=zh_CN.UTF-8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;参考链接：&lt;a href=&#34;https://www.cnblogs.com/liulianzhen99/articles/17668096.html&#34;&gt;https://www.cnblogs.com/liulianzhen99/articles/17668096.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.cnblogs.com/liulianzhen99/articles/17668096.html&#34;&gt;本博客参考原文链接&lt;/a&gt;&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

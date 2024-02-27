@@ -21,25 +21,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="哪有小孩一直哭，哪有赌徒一直输。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="陈伟的BLOG">
-<meta property="og:url" content="http://example.com/categories/%E5%B7%A5%E5%85%B7/hexo/index.html">
+    <meta name="description" content="摘要:由于vue2在2023年的12月31日已停止维护了再加上vue3在工作中的使用率越来越高而且vue3的性能代码简洁都高于vue2所以不学感觉已经不行了。本篇文章主要记录学习vue3的一些知识点和学习笔记。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue3学习">
+<meta property="og:url" content="http://example.com/2024/02/12/vue3%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="陈伟的BLOG">
-<meta property="og:description" content="哪有小孩一直哭，哪有赌徒一直输。">
+<meta property="og:description" content="摘要:由于vue2在2023年的12月31日已停止维护了再加上vue3在工作中的使用率越来越高而且vue3的性能代码简洁都高于vue2所以不学感觉已经不行了。本篇文章主要记录学习vue3的一些知识点和学习笔记。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="e:\Blog\public\images\meme\shock.png">
+<meta property="article:published_time" content="2024-02-12T08:43:27.000Z">
+<meta property="article:modified_time" content="2024-02-14T15:54:13.586Z">
 <meta property="article:author" content="陈伟">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="e:\Blog\public\images\meme\shock.png">
 
 
-<link rel="canonical" href="http://example.com/categories/%E5%B7%A5%E5%85%B7/hexo/">
+<link rel="canonical" href="http://example.com/2024/02/12/vue3%E5%AD%A6%E4%B9%A0/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"categories/工具/hexo/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":"","permalink":"http://example.com/2024/02/12/vue3%E5%AD%A6%E4%B9%A0/","path":"2024/02/12/vue3学习/","title":"vue3学习"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>分类: hexo | 陈伟的BLOG</title>
+<title>vue3学习 | 陈伟的BLOG</title>
   
 
 
@@ -103,7 +107,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -116,6 +120,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#setup%E8%AF%AD%E6%B3%95%E7%B3%96"><span class="nav-number">2.</span> <span class="nav-text"> setup 语法糖</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -167,50 +172,153 @@
 
     </div>
 
-    <div class="main-inner category posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">hexo
-          <small>分类</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/12/vue3%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.jpeg">
+      <meta itemprop="name" content="陈伟">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈伟的BLOG">
+      <meta itemprop="description" content="哪有小孩一直哭，哪有赌徒一直输。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="vue3学习 | 陈伟的BLOG">
+      <meta itemprop="description" content="摘要:由于vue2在2023年的12月31日已停止维护了再加上vue3在工作中的使用率越来越高而且vue3的性能代码简洁都高于vue2所以不学感觉已经不行了。本篇文章主要记录学习vue3的一些知识点和学习笔记。">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          vue3学习
         </h1>
-      </div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2023</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-02-12 16:43:27" itemprop="dateCreated datePublished" datetime="2024-02-12T16:43:27+08:00">2024-02-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-02-14 23:54:13" itemprop="dateModified" datetime="2024-02-14T23:54:13+08:00">2024-02-14</time>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">摘要:由于vue2在2023年的12月31日已停止维护了再加上vue3在工作中的使用率越来越高而且vue3的性能代码简洁都高于vue2所以不学感觉已经不行了。本篇文章主要记录学习vue3的一些知识点和学习笔记。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a class="markdownIt-Anchor" href="#前言">#</a> 前言</h3>
+<p>学习 vue3 的话我感觉先了解一下 vue3 相对于 vue2 都有哪些优点会更容易帮助学习。毕竟有句成语说的好 &quot;欲先制敌，必先制己&quot;，想战胜敌人就得先了解敌人</p>
+<img src="E:\Blog\public\images\meme\shock.png" style="zoom:50%;" />
+<p>vue3 相对于 vue2 的优点包括</p>
+<ol>
+<li>性能更好，因为 vue3 优化了 diff 算法，内存占用也更低</li>
+<li>渲染速度更快</li>
+<li>更小的打包体积</li>
+<li>更好的 Typescript 支持</li>
+<li>使用组合式 API  ,Compostion API。vue2 使用的是选项式 API</li>
+</ol>
+<p>虽然 vue3 很多方面都要优于 vue2，但 vue2 也有很好的实用性，vue2 已经停止维护了经过长时间的打磨已经比较成熟了，也有很完善的社区和大量的文档学习资源。</p>
+<h3 id="setup语法糖"><a class="markdownIt-Anchor" href="#setup语法糖">#</a> setup 语法糖</h3>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-11-28T19:43:05+08:00"
-              content="2023-11-28">
-          11-28
-        </time>
-      </div>
-
-      <div class="post-title">
-        <a class="post-title-link" href="/2023/11/28/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%B9%B6%E8%AE%B0%E5%BD%95%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95/" itemprop="url">
-          <span itemprop="name">创建Hexo博客</span>
-        </a>
-      </div>
-
+    
+    
+    
+    <div>
       
-    </header>
-  </article>
-
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
     </div>
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>陈伟
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2024/02/12/vue3%E5%AD%A6%E4%B9%A0/" title="vue3学习">http://example.com/2024/02/12/vue3学习/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-Hans" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
   </div>
-  
-  
-  
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/01/30/%E4%BC%98%E5%8C%96hexo%E7%9A%84%E4%BA%A4%E4%BA%92%E6%95%88%E6%9E%9C/" rel="prev" title="优化hexo的主题交互效果">
+                  <i class="fa fa-angle-left"></i> 优化hexo的主题交互效果
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/02/27/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/" rel="next" title="面试题汇总">
+                  面试题汇总 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
 
 </div>
   </main>

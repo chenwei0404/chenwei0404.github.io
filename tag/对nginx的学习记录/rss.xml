@@ -7,8 +7,8 @@
         <language>zh-CN</language>
         <pubDate>Wed, 13 Dec 2023 16:17:15 +0800</pubDate>
         <lastBuildDate>Wed, 13 Dec 2023 16:17:15 +0800</lastBuildDate>
-        <category>VMware安装遇到的问题汇总</category>
         <category>对Nginx的学习记录</category>
+        <category>VMware安装遇到的问题汇总摘要</category>
         <category>工具</category>
         <category>hexo</category>
         <item>
@@ -17,7 +17,9 @@
             <link>http://example.com/2023/12/13/Nginx%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86%E5%92%8C%E5%A4%8D%E4%B9%A0/</link>
             <category>对Nginx的学习记录</category>
             <pubDate>Wed, 13 Dec 2023 16:17:15 +0800</pubDate>
-            <description><![CDATA[ &lt;h4 id=&#34;基础知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基础知识&#34;&gt;#&lt;/a&gt; 基础知识&lt;/h4&gt;
+            <description><![CDATA[ &lt;h5 id=&#34;摘要本文主要记录nginx从安装到基本使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#摘要本文主要记录nginx从安装到基本使用&#34;&gt;#&lt;/a&gt; 摘要：本文主要记录 Nginx 从安装到基本使用&lt;/h5&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;h4 id=&#34;基础知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基础知识&#34;&gt;#&lt;/a&gt; 基础知识&lt;/h4&gt;
 &lt;p&gt;​	Nginx 是一个 HTTP 和反向代理的 web 服务器，是由俄罗斯人伊戈尔・赛索耶夫为 Rambler.ru 站点开发的。&lt;/p&gt;
 &lt;p&gt;​	Nginx 具有占用内存少，并发能力强，支持热部署，高性能，高可靠，最最最重要的免费并可以用于商业化等优点&lt;/p&gt;
 &lt;p&gt;​	Nginx 的主要使用场景包括:&lt;/p&gt;

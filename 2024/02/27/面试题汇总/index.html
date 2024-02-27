@@ -21,28 +21,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="# 摘要：本文主要记录 Nginx 从安装到基本使用">
+    <meta name="description" content="摘要:主要汇总一些关于常见的面试题包括vue、html、css、js、优化等。加上一些问题在项目中使用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nginx知识整理和复习">
-<meta property="og:url" content="http://example.com/2023/12/13/Nginx%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86%E5%92%8C%E5%A4%8D%E4%B9%A0/index.html">
+<meta property="og:title" content="面试题汇总">
+<meta property="og:url" content="http://example.com/2024/02/27/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/index.html">
 <meta property="og:site_name" content="陈伟的BLOG">
-<meta property="og:description" content="# 摘要：本文主要记录 Nginx 从安装到基本使用">
+<meta property="og:description" content="摘要:主要汇总一些关于常见的面试题包括vue、html、css、js、优化等。加上一些问题在项目中使用">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-12-13T08:17:15.000Z">
-<meta property="article:modified_time" content="2024-01-29T16:21:28.769Z">
+<meta property="article:published_time" content="2024-02-27T13:45:55.000Z">
+<meta property="article:modified_time" content="2024-02-27T16:25:20.009Z">
 <meta property="article:author" content="陈伟">
-<meta property="article:tag" content="对Nginx的学习记录">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2023/12/13/Nginx%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86%E5%92%8C%E5%A4%8D%E4%B9%A0/">
+<link rel="canonical" href="http://example.com/2024/02/27/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/12/13/Nginx%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86%E5%92%8C%E5%A4%8D%E4%B9%A0/","path":"2023/12/13/Nginx知识整理和复习/","title":"Nginx知识整理和复习"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2024/02/27/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/","path":"2024/02/27/面试题汇总/","title":"面试题汇总"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Nginx知识整理和复习 | 陈伟的BLOG</title>
+<title>面试题汇总 | 陈伟的BLOG</title>
   
 
 
@@ -119,7 +118,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%91%98%E8%A6%81%E6%9C%AC%E6%96%87%E4%B8%BB%E8%A6%81%E8%AE%B0%E5%BD%95nginx%E4%BB%8E%E5%AE%89%E8%A3%85%E5%88%B0%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text"> 摘要：本文主要记录 Nginx 从安装到基本使用</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number"></span> <span class="nav-text"> 基础知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nginx%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85"><span class="nav-number"></span> <span class="nav-text"> Nginx 快速安装</span></a></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#vue%E7%B1%BB%E6%B1%87%E6%80%BB"><span class="nav-number">1.</span> <span class="nav-text"> VUE 类汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-mvvm"><span class="nav-number">1.1.</span> <span class="nav-text"> 1、MVVM</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-vue%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E5%8E%9F%E7%90%86"><span class="nav-number">1.2.</span> <span class="nav-text"> 2、vue 的响应式原理 (双向绑定原理)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-vue%E8%B7%AF%E7%94%B1%E8%B7%B3%E8%BD%AC%E5%8F%8A%E4%BC%A0%E5%8F%82%E6%96%B9%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text"> 3、vue 路由跳转及传参方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1"><span class="nav-number">1.4.</span> <span class="nav-text"> 4、vue 组件通信</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-vue%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%BC%8Fhash%E5%92%8Chistory"><span class="nav-number">1.5.</span> <span class="nav-text"> 5、Vue 路由模式 hash 和 history</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#js%E7%B1%BB%E6%B1%87%E6%80%BB"><span class="nav-number">2.</span> <span class="nav-text"> js 类汇总</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#css%E5%92%8Chtml%E6%B1%87%E6%80%BB"><span class="nav-number">3.</span> <span class="nav-text"> css 和 html 汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E6%B1%87%E6%80%BB"><span class="nav-number">3.1.</span> <span class="nav-text"> 优化汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-html%E5%B1%82%E9%9D%A2%E4%BC%98%E5%8C%96"><span class="nav-number">3.1.1.</span> <span class="nav-text"> 1、html 层面优化</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -182,7 +181,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/13/Nginx%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86%E5%92%8C%E5%A4%8D%E4%B9%A0/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/27/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/logo.jpeg">
@@ -195,12 +194,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Nginx知识整理和复习 | 陈伟的BLOG">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="面试题汇总 | 陈伟的BLOG">
+      <meta itemprop="description" content="摘要:主要汇总一些关于常见的面试题包括vue、html、css、js、优化等。加上一些问题在项目中使用">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Nginx知识整理和复习
+          面试题汇总
         </h1>
 
         <div class="post-meta-container">
@@ -211,37 +210,70 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2023-12-13 16:17:15" itemprop="dateCreated datePublished" datetime="2023-12-13T16:17:15+08:00">2023-12-13</time>
+      <time title="创建时间：2024-02-27 21:45:55" itemprop="dateCreated datePublished" datetime="2024-02-27T21:45:55+08:00">2024-02-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-01-30 00:21:28" itemprop="dateModified" datetime="2024-01-30T00:21:28+08:00">2024-01-30</time>
+      <time title="修改时间：2024-02-28 00:25:20" itemprop="dateModified" datetime="2024-02-28T00:25:20+08:00">2024-02-28</time>
     </span>
 
   
 </div>
 
+            <div class="post-description">摘要:主要汇总一些关于常见的面试题包括vue、html、css、js、优化等。加上一些问题在项目中使用</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody"><h5 id="摘要本文主要记录nginx从安装到基本使用"><a class="markdownIt-Anchor" href="#摘要本文主要记录nginx从安装到基本使用">#</a> 摘要：本文主要记录 Nginx 从安装到基本使用</h5>
-<span id="more"></span>
-<h4 id="基础知识"><a class="markdownIt-Anchor" href="#基础知识">#</a> 基础知识</h4>
-<p>​	Nginx 是一个 HTTP 和反向代理的 web 服务器，是由俄罗斯人伊戈尔・赛索耶夫为 Rambler.ru 站点开发的。</p>
-<p>​	Nginx 具有占用内存少，并发能力强，支持热部署，高性能，高可靠，最最最重要的免费并可以用于商业化等优点</p>
-<p>​	Nginx 的主要使用场景包括:</p>
-<p>​		1、web 服务器：作为 web 服务器时，可以处理连接请求，提供静态资源文件。</p>
-<p>​		2、反向代理服务器：作为反向代理服务器时，可以将请求转发给后端的应用服务器，同时负责处理负载均衡和缓存等任务。</p>
-<p>​		3、负载均衡器：作为负载均衡器时，可以作为高性能的负载均衡器使用，将请求分发到多个应用服务器，从面提高系统的并发能力和可用性。</p>
-<p>​		4、HTTP 缓存服务器：作为 HTTP 缓存服务器时，可以缓存常见的静态资源，从而提高访问速度和用户体验。</p>
-<p>​	同时 Nginx 和 Nodejs 有很多类似的地方比如说都是基于事件驱动的非阻塞 I/O 模型，可以在高负载情况下保持良好的响应速度；都能够在多核 CPU 上运行，可以通过集群方式来实现横向扩展；也都有灵活的模块化架构，可以通过插件或模块来满足不同的需求；都适合处理大量连接和数据，并且数据传输过程中，采用的都是高效协议和算法能保证网络传输效率。但 Nginx 和 nodejs 各有各的一片天！Nginx 擅长于底层服务端资源处理，Nodejs 更擅长上层具体业务逻辑的处理。</p>
-<h4 id="nginx快速安装"><a class="markdownIt-Anchor" href="#nginx快速安装">#</a> Nginx 快速安装</h4>
+    <div class="post-body" itemprop="articleBody"><h4 id="vue类汇总"><a class="markdownIt-Anchor" href="#vue类汇总">#</a> VUE 类汇总</h4>
+<h5 id="1-mvvm"><a class="markdownIt-Anchor" href="#1-mvvm">#</a> 1、MVVM</h5>
+<p>MVVM 分别指 model 层（数据模型层），view 层（视图层），viewModel 层（视图模型层）。主要实现了<strong>数据变化时视图自动更新。视图变化时绑定的数据自动更新。</strong></p>
+<p>MVVM 的优点： 实现视图 (view) 和模型 (model) 的分享，降低代码耦合，提⾼视图或逻辑的复⽤性。能自动更新 DOM 提⾼了可测试性<br>
+ MVVM 的缺点:    bug 难被调试 (因为数据视图同步更新) 需要通过注释一段代码确定问题和 debugger 断点才能找到问题出在哪里</p>
+<h5 id="2-vue的响应式原理双向绑定原理"><a class="markdownIt-Anchor" href="#2-vue的响应式原理双向绑定原理">#</a> 2、vue 的响应式原理 (双向绑定原理)</h5>
+<p>​	在 Vue 2.x 中，利⽤的是 Object.defineProperty（es5 特性） 去劫持对象的访问器（Getter、Setter），当对象属性值发⽣变化时可获取变化，然后根据变化来作后续响应；(一个一个的劫持)。<br>
+​	在 Vue 3.0 中，则是通过 Proxy （es6 特性）代理对象进⾏类似的操作。劫持的是整个对象，只要对象中的属性变化了，都能劫持到</p>
+<p>Object.defineProperty 和 Proxy 的优缺点:<br>
+Proxy: 可以直接监听整个对象，⽽⾮是对象的某个属性；可以直接监听数组的变化；拦截⽅法丰富 (get set deleteProperty、has 等)<br>
+ Object.defineProperty：兼容性较好（可⽀持到 IE9）</p>
+<p><strong>简单概述</strong> ：通过 Object.defineProperty 完成对于数据的劫持，通过观察者模式，完成对于节点的数据更新<br>
+<strong>详细概述</strong>：通过 Object.defineProperty 方法 完成了对于 Vue 实例中数据的 劫持，通过对于 data 中数据 进行 set 的劫持监听，然后通过<strong>观察者模式</strong>，通知 对应的绑定节点 进行节点数据更新，完成数据驱动视图的更新</p>
+<p><strong>观察者模式</strong>:	vue 采用的是观察者模式，是一种一对多的关系，一上来 vue 在解析渲染时，会进行依赖收集，会将渲染 watcher、计算属性 watcher、侦听器 watcher, 都收集到对应的 dep 中，将来 Object.defineProperty 监听到数据变化，就根据依赖关系，派发更新</p>
+<h5 id="3-vue路由跳转及传参方式"><a class="markdownIt-Anchor" href="#3-vue路由跳转及传参方式">#</a> 3、vue 路由跳转及传参方式</h5>
+<p>query 传参：可以使用 path 也可以使用 name (具名路由)。传递的信息会出现在 url 中类似于 get</p>
+<p>params 传参：必须要用命名路由的方式传值；不会显示在地址栏中，刷新会丢失 (可以配合 localStorage 使用)</p>
+<h5 id="4-vue组件通信"><a class="markdownIt-Anchor" href="#4-vue组件通信">#</a> 4、vue 组件通信</h5>
+<p>父传子：通过 props 将数据在组件树中进行自上而下的传递。</p>
+<p>子传父：子组件通过 emit 方法触发一个自定义事件，并将数据传递给父组件，父组件通过监听这个事件来接收数据。<br>
+bus 事件总线：可通过 EventBus 进⾏信息的发布与订阅</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Vue.prototype.$eventBus = new Vue()</span><br><span class="line"></span><br><span class="line">// A组件中, 监听 bus的事件</span><br><span class="line">this.$eventBus.$on(&#x27;事件名&#x27;, function(参数1, 参数2, ...) &#123;&#125;)</span><br><span class="line">// B组件中, 触发 bus的事件</span><br><span class="line">this.$eventBus.$emit(&#x27;事件名&#x27;, 参数1, 参数2, ...)</span><br></pre></td></tr></table></figure>
+<p>vuex 通信：具体实现<br>
+父组件调用子组件中的方法：<br>
+1、ref 直接调用<br>
+ 2、$children。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.$children[0]调用子组件的方法</span><br></pre></td></tr></table></figure>
+<p>3、emit 和 on。<br>
+子组件调用父组件的方法<br>
+ 1、$parent。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.$parent.父组件中的方法</span><br></pre></td></tr></table></figure>
+<p>2、$emit</p>
+<h5 id="5-vue路由模式hash和history"><a class="markdownIt-Anchor" href="#5-vue路由模式hash和history">#</a> 5、Vue 路由模式 hash 和 history</h5>
+<p>Hash 模式地址栏中有 #，history 没有，history 模式下刷新，会出现 404 情况，需要后台配置</p>
+<p>HTML5 提供了 History API 来实现 URL 的变化。其中最主要的 API 有以下两个：history.pushState () 和 history.repalceState ()。这两个 API 可以在不进行刷新的情况下，操作浏览器的历史纪录。唯一不同的是，前者是新增一个历史记录，后者是直接替换当前的历史记录。</p>
+<h4 id="js类汇总"><a class="markdownIt-Anchor" href="#js类汇总">#</a> js 类汇总</h4>
+<p>1、js 高阶函数 (map，foreach。。。)<br>
+ map 遍历：对原来的数组没有影响；创建一个新数组，其结果是该数组中的每个元素都调用提供的函数后返回的结果<br>
+ filter 过滤：返回值为一个新的数组，这个数组里面包含参数里面所有被保留的项。<br>
+sort 排序:</p>
+<h4 id="css和html汇总"><a class="markdownIt-Anchor" href="#css和html汇总">#</a> css 和 html 汇总</h4>
+<h5 id="优化汇总"><a class="markdownIt-Anchor" href="#优化汇总">#</a> 优化汇总</h5>
+<h6 id="1-html层面优化"><a class="markdownIt-Anchor" href="#1-html层面优化">#</a> 1、html 层面优化</h6>
+<p>1、减少文件大小 (压缩)</p>
 
     </div>
 
@@ -268,7 +300,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://example.com/2023/12/13/Nginx%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86%E5%92%8C%E5%A4%8D%E4%B9%A0/" title="Nginx知识整理和复习">http://example.com/2023/12/13/Nginx知识整理和复习/</a>
+      <a href="http://example.com/2024/02/27/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/" title="面试题汇总">http://example.com/2024/02/27/面试题汇总/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-Hans" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -293,21 +325,18 @@
   </div>
 </div>
 
-          <div class="post-tags">
-              <a href="/tags/%E5%AF%B9Nginx%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" rel="tag"># 对Nginx的学习记录</a>
-          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/11/28/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%B9%B6%E8%AE%B0%E5%BD%95%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95/" rel="prev" title="创建Hexo博客">
-                  <i class="fa fa-angle-left"></i> 创建Hexo博客
+                <a href="/2024/02/12/vue3%E5%AD%A6%E4%B9%A0/" rel="prev" title="vue3学习">
+                  <i class="fa fa-angle-left"></i> vue3学习
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/12/13/VMware%E8%99%9A%E6%8B%9F%E5%99%A8%E5%AE%89%E8%A3%85/" rel="next" title="VMware虚拟器安装">
-                  VMware虚拟器安装 <i class="fa fa-angle-right"></i>
+                <a href="/2024/02/27/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/" rel="next" title="">
+                   <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>

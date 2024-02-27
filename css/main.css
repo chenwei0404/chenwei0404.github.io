@@ -2439,6 +2439,12 @@ header.header {
 .site-meta {
   padding: 20px 0;
 }
+@media (min-width: 992px) {
+  .site-meta {
+    background-image: url("/images/bg.png");
+    background-size: cover;
+  }
+}
 @media (min-width: 768px) and (max-width: 991px) {
   .site-nav-toggle,
   .site-nav-right {

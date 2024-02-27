@@ -21,19 +21,19 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="# 1、VMware 虚拟机下载地址 VMware Workstation Pro 虚拟机下载地址:https:&#x2F;&#x2F;customerconnect.vmware.com&#x2F;cn&#x2F;downloads&#x2F;info&#x2F;slug&#x2F;desktop_end_user_computing&#x2F;vmware_workstation_pro&#x2F;17_0 Centos 镜像下载地址：https:&#x2F;&#x2F;mirrors.tuna.ts">
+    <meta name="description" content="# 摘要：本文主要记录了 VMware 虚拟机的安装和 Centos 镜像的下载。在开发、生产、教学过程中需要使用不同的操作系统都可以通过虚拟机调试来完成，从而达到降低成本的目的。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VMware虚拟器安装">
 <meta property="og:url" content="http://example.com/2023/12/13/VMware%E8%99%9A%E6%8B%9F%E5%99%A8%E5%AE%89%E8%A3%85/index.html">
 <meta property="og:site_name" content="陈伟的BLOG">
-<meta property="og:description" content="# 1、VMware 虚拟机下载地址 VMware Workstation Pro 虚拟机下载地址:https:&#x2F;&#x2F;customerconnect.vmware.com&#x2F;cn&#x2F;downloads&#x2F;info&#x2F;slug&#x2F;desktop_end_user_computing&#x2F;vmware_workstation_pro&#x2F;17_0 Centos 镜像下载地址：https:&#x2F;&#x2F;mirrors.tuna.ts">
+<meta property="og:description" content="# 摘要：本文主要记录了 VMware 虚拟机的安装和 Centos 镜像的下载。在开发、生产、教学过程中需要使用不同的操作系统都可以通过虚拟机调试来完成，从而达到降低成本的目的。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="c:%5CUsers%5Cchen">
 <meta property="og:image" content="c:%5CUsers%5Cchen">
 <meta property="article:published_time" content="2023-12-13T10:40:17.000Z">
-<meta property="article:modified_time" content="2023-12-13T15:07:00.688Z">
+<meta property="article:modified_time" content="2024-01-29T16:43:32.321Z">
 <meta property="article:author" content="陈伟">
-<meta property="article:tag" content="VMware安装遇到的问题汇总">
+<meta property="article:tag" content="VMware安装遇到的问题汇总摘要">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="c:%5CUsers%5Cchen">
 
@@ -122,7 +122,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-vmware%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80"><span class="nav-number">1.</span> <span class="nav-text"> 1、VMware 虚拟机下载地址</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#tip%E4%B8%8B%E8%BD%BDvmware%E7%9A%84%E6%97%B6%E5%80%99%E6%94%B9%E6%88%90%E4%B8%AD%E6%96%87%E6%B3%A8%E5%86%8C%E9%A1%B5%E4%BC%9A%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">1.0.1.</span> <span class="nav-text"> tip: 下载 VMware 的时候改成中文注册页会出现的问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-centos%E8%AE%BE%E5%A4%87%E4%B8%AD%E6%96%87"><span class="nav-number">2.</span> <span class="nav-text"> 2、Centos 设备中文</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%91%98%E8%A6%81%E6%9C%AC%E6%96%87%E4%B8%BB%E8%A6%81%E8%AE%B0%E5%BD%95%E4%BA%86vmware%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8Ccentos%E9%95%9C%E5%83%8F%E7%9A%84%E4%B8%8B%E8%BD%BD-%E5%9C%A8%E5%BC%80%E5%8F%91-%E7%94%9F%E4%BA%A7-%E6%95%99%E5%AD%A6%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%9C%80%E8%A6%81%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%83%BD%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%B0%83%E8%AF%95%E6%9D%A5%E5%AE%8C%E6%88%90%E4%BB%8E%E8%80%8C%E8%BE%BE%E5%88%B0%E9%99%8D%E4%BD%8E%E6%88%90%E6%9C%AC%E7%9A%84%E7%9B%AE%E7%9A%84"><span class="nav-number">1.</span> <span class="nav-text"> 摘要：本文主要记录了 VMware 虚拟机的安装和 Centos 镜像的下载。在开发、生产、教学过程中需要使用不同的操作系统都可以通过虚拟机调试来完成，从而达到降低成本的目的。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-vmware%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80"><span class="nav-number"></span> <span class="nav-text"> 1、VMware 虚拟机下载地址</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#tip%E4%B8%8B%E8%BD%BDvmware%E7%9A%84%E6%97%B6%E5%80%99%E6%94%B9%E6%88%90%E4%B8%AD%E6%96%87%E6%B3%A8%E5%86%8C%E9%A1%B5%E4%BC%9A%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text"> tip: 下载 VMware 的时候改成中文注册页会出现的问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-centos%E8%AE%BE%E5%A4%87%E4%B8%AD%E6%96%87"><span class="nav-number"></span> <span class="nav-text"> 2、Centos 设备中文</span></a></div>
         </div>
         <!--/noindex-->
 
@@ -137,7 +137,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -158,7 +158,15 @@
 
         </div>
       </div>
+
+      <div>
+        <link rel="stylesheet" href="/dist/APlayer.min.css">
+        <div id="aplayer"></div>
+        <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+        <script type="text/javascript" src="/dist/music.js"></script>
+      </div>
     </div>
+
 
     
   </aside>
@@ -205,9 +213,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-12-13 18:40:17 / 修改时间：23:07:00" itemprop="dateCreated datePublished" datetime="2023-12-13T18:40:17+08:00">2023-12-13</time>
+      <time title="创建时间：2023-12-13 18:40:17" itemprop="dateCreated datePublished" datetime="2023-12-13T18:40:17+08:00">2023-12-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-01-30 00:43:32" itemprop="dateModified" datetime="2024-01-30T00:43:32+08:00">2024-01-30</time>
     </span>
 
   
@@ -219,10 +233,12 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="1-vmware虚拟机下载地址"><a class="markdownIt-Anchor" href="#1-vmware虚拟机下载地址">#</a> 1、VMware 虚拟机下载地址</h3>
-<p>VMware Workstation Pro 虚拟机下载地址:<a href="VMware%E4%B8%8B%E8%BD%BD%E7%BD%91%E5%9D%80">https://customerconnect.vmware.com/cn/downloads/info/slug/desktop_end_user_computing/vmware_workstation_pro/17_0</a></p>
-<p>Centos 镜像下载地址：<a href="centos%E9%95%9C%E5%83%8F">https://mirrors.tuna.tsinghua.edu.cn/centos/7.9.2009/isos/x86_64/</a></p>
-<p>VMware 英文注册地址 (千万不要切成中文，原因下方 tip 解释，密码校验是大小写字母 + 数字 + 特殊字符，国家可以选择美国地区)：<a href="%E8%8B%B1%E6%96%87%E5%9C%B0%E5%9D%80">https://customerconnect.vmware.com/account-registration</a></p>
+    <div class="post-body" itemprop="articleBody"><h5 id="摘要本文主要记录了vmware虚拟机的安装和centos镜像的下载-在开发-生产-教学过程中需要使用不同的操作系统都可以通过虚拟机调试来完成从而达到降低成本的目的"><a class="markdownIt-Anchor" href="#摘要本文主要记录了vmware虚拟机的安装和centos镜像的下载-在开发-生产-教学过程中需要使用不同的操作系统都可以通过虚拟机调试来完成从而达到降低成本的目的">#</a> 摘要：本文主要记录了 VMware 虚拟机的安装和 Centos 镜像的下载。在开发、生产、教学过程中需要使用不同的操作系统都可以通过虚拟机调试来完成，从而达到降低成本的目的。</h5>
+<span id="more"></span>
+<h3 id="1-vmware虚拟机下载地址"><a class="markdownIt-Anchor" href="#1-vmware虚拟机下载地址">#</a> 1、VMware 虚拟机下载地址</h3>
+<p><a target="_blank" rel="noopener" href="https://customerconnect.vmware.com/cn/downloads/info/slug/desktop_end_user_computing/vmware_workstation_pro/17_0">VMware Workstation Pro 虚拟机下载地址</a></p>
+<p><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/centos/7.9.2009/isos/x86_64/">Centos 镜像下载地址</a></p>
+<p>千万不要进入 VMware 注册页面就切换为中文 (下方有原因图片展示)，密码校验是大小写字母 + 数字 + 特殊字符，国家可以选择美国地区；<a target="_blank" rel="noopener" href="https://customerconnect.vmware.com/account-registration">VMware 英文注册地址 (不要切换为中文哦！！！)</a></p>
 <p>可以成功注册的例子:</p>
 <p>​	Email address： 填写正确的邮箱，需要用邮箱验证</p>
 <p>​	City： Sacramento</p>
@@ -230,7 +246,7 @@
 <p>​	Country/Territory： United States</p>
 <p>​	State or province： California</p>
 <p>​	Business phone： 0013602923672<br>
-​	原文例子链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42417351/article/details/128042004">https://blog.csdn.net/weixin_42417351/article/details/128042004</a></p>
+​	<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42417351/article/details/128042004">上面注册参数原文链接</a></p>
 <h5 id="tip下载vmware的时候改成中文注册页会出现的问题"><a class="markdownIt-Anchor" href="#tip下载vmware的时候改成中文注册页会出现的问题">#</a> tip: 下载 VMware 的时候改成中文注册页会出现的问题</h5>
 <p>​	注册页面一定要是英文的，中文的会无法校验验证码，下图是中文页面的情况：</p>
 <p><img src="C:%5CUsers%5Cchen'wei%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231213190324189.png" alt="image-20231213190324189"></p>
@@ -243,7 +259,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">localectl status</span><br><span class="line">	/*回车后展示以下内容，LANG=en_US.UTF-8就是当前的语言*/</span><br><span class="line">	System Locale: LANG=en_US.UTF-8</span><br><span class="line">       VC Keymap: us</span><br><span class="line">      X11 Layout: us</span><br></pre></td></tr></table></figure>
 <p>2、修改语言为中文</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/*LANG=跟的是语言的类型zh_CN.UTF-8可以修改成中文，en_US.UTF-8可以修改为英文*/</span><br><span class="line">localectl set-locale LANG=zh_CN.UTF-8</span><br></pre></td></tr></table></figure>
-<p>参考链接：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/liulianzhen99/articles/17668096.html">https://www.cnblogs.com/liulianzhen99/articles/17668096.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/liulianzhen99/articles/17668096.html">本博客参考原文链接</a></p>
 
     </div>
 
@@ -296,7 +312,7 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/VMware%E5%AE%89%E8%A3%85%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/" rel="tag"># VMware安装遇到的问题汇总</a>
+              <a href="/tags/VMware%E5%AE%89%E8%A3%85%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%E6%91%98%E8%A6%81/" rel="tag"># VMware安装遇到的问题汇总摘要</a>
           </div>
 
         
@@ -308,6 +324,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2024/01/17/%E5%9C%B0%E5%9B%BE%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/" rel="next" title="地图开发学习">
+                  地图开发学习 <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -339,7 +358,7 @@
   <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
     本站访客数:<span id="busuanzi_value_site_uv"></span>
   </span>
-  <span class="post-count">博客全站共3.7k字</span>
+  <span class="post-count">博客全站共5.3k字</span>
   </div>
 
   <!-- <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
